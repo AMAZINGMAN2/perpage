@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "install-trunk": "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && export PATH=\"$HOME/.cargo/bin:$PATH\" && cargo install trunk",
-    "build": "export PATH=\"$HOME/.cargo/bin:$PATH\" && npm run install-trunk && trunk build --release"
+    "install-wasm-target": "rustup target add wasm32-unknown-unknown",
+    "build": "export PATH=\"$HOME/.cargo/bin:$PATH\" && npm run install-trunk && npm run install-wasm-target && trunk build --release"
   },
   "devDependencies": {
     "wasm-pack": "^0.10.0"
