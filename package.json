@@ -2,9 +2,8 @@
   "name": "perpage",
   "version": "1.0.0",
   "scripts": {
-    "source-bashrc": "sh -c 'source ~/.bashrc || true; source ~/.cargo/env || true'",
-    "install-trunk": "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && cargo install trunk",
-    "build": "npm run source-bashrc && npm run install-trunk && npm run source-bashrc && trunk build --release"
+    "install-trunk": "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && export PATH=\"$HOME/.cargo/bin:$PATH\" && cargo install trunk",
+    "build": "export PATH=\"$HOME/.cargo/bin:$PATH\" && npm run install-trunk && trunk build --release"
   },
   "devDependencies": {
     "wasm-pack": "^0.10.0"
