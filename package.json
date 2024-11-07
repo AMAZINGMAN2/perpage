@@ -2,7 +2,7 @@
   "name": "perpage",
   "version": "1.0.0",
   "scripts": {
-    "install-trunk": "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && source $HOME/.cargo/env && cargo install trunk", 
+    "install-trunk": "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && export PATH=\"$HOME/.cargo/bin:$PATH\" && cargo install trunk",
     "build": "npm run install-trunk && trunk build --release"
   },
   "devDependencies": {
