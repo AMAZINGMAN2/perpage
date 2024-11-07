@@ -1,0 +1,7 @@
+{
+  "name": "sycamore-app",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "trunk build --release"  // Builds the optimized production version
+  }
+}
